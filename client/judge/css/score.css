@@ -1,0 +1,477 @@
+/* =========================================
+   SCORE PAGE - TECH BOX STYLE
+   Theme matches Mentor/Judge pages
+   Palette: Black, #4BDC13, #7eef05
+========================================= */
+/* =========================================
+   CUSTOM SCROLLBAR DESIGN
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+  border-left: 1px solid #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #4BDC13,
+    #7eef05
+  );
+  border-radius: 10px;
+  border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #7eef05,
+    #4BDC13
+  );
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4BDC13 #050505;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', "Segoe UI", monospace;
+}
+
+body {
+  background: #000000;
+  color: #a0a0a0;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-image:
+    linear-gradient(rgba(75, 220, 19, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 220, 19, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  position: relative;
+}
+
+/* =========================================
+   BACKGROUND GLOW EFFECTS
+========================================= */
+
+.bg-glow-ball {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-1 {
+  width: 300px;
+  height: 300px;
+  background: #4BDC13;
+  top: -100px;
+  left: -100px;
+}
+
+.glow-2 {
+  width: 350px;
+  height: 350px;
+  background: #7eef05;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  width: 270px;
+  background: #050505;
+  padding: 40px 15px;
+  border-right: 2px solid #1a1a1a;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #4BDC13, #7eef05);
+}
+
+.sidebar-top h2 {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.sidebar-top p {
+  font-size: 20px;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #777;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar li.active {
+  background: rgba(75, 220, 19, 0.08);
+  color: #7eef05;
+  border: 1px solid rgba(75, 220, 19, 0.2);
+  font-weight: 700;
+}
+
+#logoutBtn {
+  margin-top: auto;
+  width: 100%;
+  background: rgba(239, 68, 68, 0.03);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.763);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.08);
+  color: #fafafa;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+  flex: 1;
+  padding: 60px;
+}
+
+/* =========================================
+   TOP HEADER
+========================================= */
+
+.top-header {
+  margin-bottom: 40px;
+}
+
+.top-header h1 {
+  font-size: 34px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.top-header p {
+  max-width: 800px;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+  background: #080808;
+  border: 1px solid #1a1a1a;
+  padding: 50px;
+  text-align: center;
+}
+
+.empty-state h2 {
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* =========================================
+   TEAM CARD
+========================================= */
+
+.team-card {
+  background: #080808;
+  border: 1px solid #1a1a1a;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  border-color: #4BDC13;
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   TEAM HEADER
+========================================= */
+
+.team-card h2 {
+  color: #dcb013;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.team-card p {
+  font-size: 15px;
+  border-bottom: 1px solid #151515;
+  padding: 10px 0;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.team-card strong {
+  color: #77ff00;
+  font-size: 15px;
+}
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+form {
+  margin-top: 30px;
+}
+
+form h3 {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   CRITERIA BOX
+========================================= */
+
+.criteria-box {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid #1a1a1a;
+}
+
+.criteria-box label {
+  font-size: 20px;
+  color: #7eef05;
+  font-weight: 600;
+}
+
+.criteria-box input {
+  width: 100%;
+  background: #37ff00ca;
+  border-radius: 15px;
+  border: 1px solid #222;
+  color: #000000;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  transition: 0.3s;
+}
+
+.criteria-box input:focus {
+  outline: none;
+  border-color: #4BDC13;
+  color: #fff;
+  background: #1a1a1a;
+  box-shadow: 0 0 10px rgba(75, 220, 19, 0.08);
+}
+
+/* =========================================
+   FEEDBACK TEXTAREA
+========================================= */
+
+.feedbackInput {
+  width: 100%;
+  min-height: 140px;
+  background: #050505;
+  border: 1px solid #222;
+  color: #ffffff;
+  padding: 16px;
+  font-size: 13px;
+  font-family: 'Space Mono', monospace;
+  resize: vertical;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.feedbackInput:focus {
+  outline: none;
+  border-color: #4BDC13;
+  box-shadow: 0 0 10px rgba(75, 220, 19, 0.08);
+}
+
+.feedbackInput::placeholder {
+  color: #555;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.submission-box a{
+  background-color: #4213dc;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: all ease 0.3s;
+  color: #fbfbfb;
+}
+.submission-box a:hover{
+  background-color: #1367dc;
+}
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+.submitted-badge {
+  background: #7EEF05;
+  color: rgb(9, 24, 30);
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  clip-path: polygon(
+    4% 0,
+    100% 0,
+    100% 75%,
+    96% 100%,
+    0 100%,
+    0 25%
+    );
+  }
+  .submitted-badge:hover{
+    background: #05ef20;
+    letter-spacing: 0px;
+    cursor: pointer;
+  box-shadow: 0 0 15px rgba(75, 220, 19, 0.25);
+}
+form button {
+  width: 100%;
+  background: #4BDC13;
+  color: #000;
+  border: none;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  clip-path: polygon(
+    4% 0,
+    100% 0,
+    100% 75%,
+    96% 100%,
+    0 100%,
+    0 25%
+  );
+}
+
+form button:hover {
+  background: #7eef05;
+  box-shadow: 0 0 15px rgba(75, 220, 19, 0.25);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 35px;
+  }
+
+  .criteria-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .top-header h1 {
+    font-size: 26px;
+  }
+
+  .team-card {
+    padding: 22px;
+  }
+}

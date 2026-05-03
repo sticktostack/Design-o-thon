@@ -1,0 +1,350 @@
+/* =========================================
+   CUSTOM SCROLLBAR DESIGN
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+  border-left: 1px solid #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #4BDC13,
+    #7eef05
+  );
+  border-radius: 10px;
+  border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    #7eef05,
+    #4BDC13
+  );
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4BDC13 #050505;
+}
+
+
+
+/* =========================================
+   ROUNDS MANAGEMENT - TECH BOX STYLE
+   Palette: Black, #4BDC13, #7eef05
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', "Segoe UI", monospace;
+}
+
+body {
+  background: #000000;
+  color: #a0a0a0;
+  /* Industrial Grid Background */
+  background-image: 
+    linear-gradient(rgba(75, 220, 19, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(75, 220, 19, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.rounds-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================================
+   SIDEBAR (System Uniformity)
+========================================= */
+
+
+.sidebar {
+  width: 270px;
+  background: #050505;
+  padding: 40px 15px; /* Thinner padding */
+  border-right: 2px solid #1a1a1a; /* Thick, industrial border */
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The 'Glow' on top of sidebar */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, #4BDC13, #7eef05);
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7eef05;
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  border-radius: 0px; /* SHARP Corners */
+  cursor: pointer;
+  color: #777;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar li:hover {
+  background: rgba(75, 220, 19, 0.03);
+  color: #4BDC13;
+  border-left: 2px solid rgba(75, 220, 19, 0.5);
+}
+
+.sidebar li.active {
+  background: rgba(75, 220, 19, 0.08);
+  color: #7eef05;
+  border: 1px solid rgba(75, 220, 19, 0.2);
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(75, 220, 19, 0.1);
+}
+
+#logoutBtn {
+  margin-top: auto;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.03);
+}
+
+#logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.1);
+}
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+  flex: 1;
+  padding: 60px;
+}
+
+.main-content h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 20px;
+}
+
+/* =========================================
+   TECH ROUND FORM
+========================================= */
+
+.round-form-section {
+  background: #080808;
+  border: 1px solid #1a1a1a;
+  padding: 35px;
+  margin-bottom: 40px;
+  position: relative;
+  /* Aggressive Geometric Cut */
+  clip-path: polygon(0 0, 94% 0, 100% 18%, 100% 100%, 6% 100%, 0 82%);
+}
+
+.round-form-section h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7eef05;
+  margin-bottom: 25px;
+}
+
+#roundForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+/* #logoutBtn {
+  margin-top: auto;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.03);
+}
+
+#logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.1);
+} */
+/* Industrial Input & Select Styling */
+#roundForm input, 
+#roundForm select {
+  background: #050505;
+  border: 1px solid #222;
+  padding: 15px;
+  color: #ffffff;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  border-radius: 0;
+  transition: 0.3s;
+}
+
+/* Fix for dark appearance of datetime-local icon */
+#roundForm input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+#roundForm input:focus, 
+#roundForm select:focus {
+  outline: none;
+  border-color: #4BDC13;
+  box-shadow: 0 0 10px rgba(75, 220, 19, 0.1);
+}
+
+#roundForm button {
+  grid-column: span 2;
+  background: #4BDC13;
+  color: #000;
+  border: none;
+  padding: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  clip-path: polygon(2% 0, 100% 0, 100% 75%, 98% 100%, 0 100%, 0 25%);
+  transition: all ease-in-out 0.3s;
+}
+
+#roundForm button:hover {
+  background: #7eef05;
+  box-shadow: 0 0 20px rgba(75, 220, 19, 0.3);
+}
+
+/* =========================================
+   ROUND LIST & CARDS
+========================================= */
+
+.round-list-section h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#roundsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.round-card {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  padding: 25px;
+  position: relative;
+  transition: 0.3s;
+}
+/* 
+.round-card::before {
+  content: "NODE_STAGING";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 8px;
+  padding: 4px 10px;
+  background: #1a1a1a;
+  color: #4BDC13;
+} */
+
+.round-card:hover {
+  border-color: #7eef05;
+  transform: translateY(-5px);
+  background: #0c0c0c;
+}
+
+.round-card h3 {
+  color: #4BDC13;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #222;
+  padding-bottom: 10px;
+}
+
+.round-card p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.round-card p span {
+  color: #cbd5e1;
+  font-weight: bold;
+}
+
+/* Status Specific Colors */
+.status-active { color: #4BDC13; }
+.status-closed { color: #ef4444; }
+
+.delete-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #331111;
+  color: #ef4444;
+  padding: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+  #roundForm {
+    grid-template-columns: 1fr;
+  }
+  #roundForm button {
+    grid-column: span 1;
+  }
+}

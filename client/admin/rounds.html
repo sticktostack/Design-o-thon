@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rounds Management</title>
+  <link rel="stylesheet" href="css/rounds.css">
+</head>
+
+<body>
+
+  <div class="rounds-page">
+
+    <aside class="sidebar">
+      <h2>Design O Thon</h2>
+
+      <ul>
+        <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+      <li onclick="window.location.href='notifications.html'">Notifications</li>
+        <li onclick="window.location.href='teams.html'">Make Teams</li>
+        <li onclick="window.location.href='judges.html'">Judges or Mentors</li>
+        <!-- <li onclick="window.location.href='mentors.html'">Assign Mentors</li> -->
+        <li class="active">Rounds</li>
+        
+        <li onclick="window.location.href='submissions.html'">Submissions</li>
+        <li onclick="window.location.href='leaderboard.html'">Leaderboard</li>
+        <li id="logoutBtn">Logout</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+
+      <h1>Manage Rounds</h1>
+
+      <section class="round-form-section">
+        <h2>Create New Round</h2>
+
+        <form id="roundForm">
+          <input type="number" id="roundNumber" placeholder="Round Number (1,2,3)" required>
+
+          <input type="text" id="title" placeholder="Round Title" required>
+
+          <input type="datetime-local" id="deadline" required>
+
+          <select id="status" required>
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+            <option value="Closed">Closed</option>
+          </select>
+
+          <button type="submit">Create Round</button>
+        </form>
+
+        <p id="message"></p>
+      </section>
+
+      <section class="round-list-section">
+        <h2>All Rounds</h2>
+
+        <div id="roundsContainer"></div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/rounds.js"></script>
+</body>
+
+</html>

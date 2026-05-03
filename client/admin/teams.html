@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams Management</title>
+  <link rel="stylesheet" href="css/teams.css">
+</head>
+<body>
+
+<div class="teams-page">
+
+  <aside class="sidebar">
+    <h2>Design O Thon</h2>
+
+    <ul>
+      <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+      <li onclick="window.location.href='notifications.html'">Notifications</li>
+      <li class="active">Make Teams</li>
+      <li onclick="window.location.href='judges.html'">Judges or Mentors</li>
+      <!-- <li onclick="window.location.href='mentors.html'">Assign  Mentors</li> -->
+      <li onclick="window.location.href='rounds.html'">Rounds</li>
+      <li onclick="window.location.href='submissions.html'">Submissions</li>
+      <li onclick="window.location.href='leaderboard.html'">Leaderboard</li>
+      <li id="logoutBtn">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- <h1>Teams Management</h1> -->
+
+    <section class="team-form-section">
+      <h2>Add New Team</h2>
+
+      <form id="teamForm">
+        <input type="text" id="teamName" placeholder="Team Name" required>
+        <input type="text" id="collegeName" placeholder="College Name" required>
+        <input type="text" id="teamLeader" placeholder="Team Leader" required>
+        <input type="email" id="email" placeholder="Team Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit">Add Team</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+
+    <section class="team-list-section">
+      <h2>All Teams</h2>
+
+      <div id="teamsContainer"></div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/teams.js"></script>
+</body>
+</html>

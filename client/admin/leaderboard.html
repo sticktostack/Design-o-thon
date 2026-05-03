@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Leaderboard</title>
+  <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+
+<div class="leaderboard-page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Design O Thon</h2>
+
+    <ul>
+      <li onclick="window.location.href='dashboard.html'">
+        Dashboard
+      </li>
+
+      <li onclick="window.location.href='notifications.html'">
+        Notifications
+      </li>
+
+      <li onclick="window.location.href='teams.html'">
+        Make Teams
+      </li>
+
+      <li onclick="window.location.href='judges.html'">
+        Judges or Mentors
+      </li>
+
+      <!-- <li onclick="window.location.href='mentors.html'">
+        Assign Mentors
+      </li> -->
+
+      <li onclick="window.location.href='rounds.html'">
+        Rounds
+      </li>
+
+      <li onclick="window.location.href='submissions.html'">
+        Submissions
+      </li>
+
+      <li class="active">
+        Leaderboard
+      </li>
+
+      <li id="logoutBtn">
+        Logout
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <div class="leaderboard-header">
+      <h1>Live Leaderboard</h1>
+      <p>
+        Real-time rankings based on Round 1, Round 2,
+        Round 3 and Final Total Score
+      </p>
+    </div>
+
+    <!-- TOP 3 PODIUM -->
+    <div id="podiumContainer" class="podium-grid">
+      <!-- Dynamic Top 3 Teams -->
+    </div>
+
+    <!-- Leaderboard Table -->
+    <section class="leaderboard-section">
+
+      <div class="leaderboard-card">
+
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Team Name</th>
+              <th>College</th>
+              <th>Round 1</th>
+              <th>Round 2</th>
+              <th>Round 3</th>
+              <th>Total Score</th>
+            </tr>
+          </thead>
+
+          <tbody id="leaderboardBody">
+            <!-- Dynamic Data -->
+          </tbody>
+        </table>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

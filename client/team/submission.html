@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Submission Panel</title>
+    <link rel="stylesheet" href="css/submission.css">
+</head>
+
+<body>
+<!-- Place this immediately after <body> -->
+<div class="cursor-glow"></div>
+    <div class="submission-page">
+
+        <aside class="sidebar">
+            <h2>Design O Thon</h2>
+
+            <ul>
+                <li class="active">Submit Design</li>
+                <li id="logoutBtn">Logout</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+
+            <!-- <h1>Round Submission</h1> -->
+
+            <section class="submission-form-section">
+                <h2>Upload Your Design</h2>
+
+                <form id="submissionForm" enctype="multipart/form-data">
+
+                    <input type="text" id="teamName" placeholder="Team Name" readonly>
+
+                    <input type="number" id="roundNumber" placeholder="Round Number" required>
+
+                    <input type="url" id="figmaLink" placeholder="Figma Link">
+
+                    <input type="url" id="canvaLink" placeholder="Canva Link">
+
+                    <textarea id="notes" placeholder="Describe your design idea..."></textarea>
+
+                    <input type="file" id="pdfFile" accept=".pdf">
+
+                    <button type="submit">
+                        Submit Design
+                    </button>
+                </form>
+
+                <p id="message"></p>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="js/submission.js"></script>
+</body>
+
+</html>

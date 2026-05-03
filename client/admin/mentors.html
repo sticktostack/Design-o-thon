@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentors Management</title>
+  <link rel="stylesheet" href="css/mentors.css">
+</head>
+<body>
+
+<div class="mentors-page">
+
+  <aside class="sidebar">
+    <h2>Design O Thon</h2>
+
+    <ul>
+      <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+      <li onclick="window.location.href='notifications.html'">Notifications</li>
+      <li onclick="window.location.href='teams.html'">Make Teams</li>
+      <li onclick="window.location.href='judges.html'">Assign Judges</li>
+      <li class="active">Assign Mentors</li>
+      <li onclick="window.location.href='rounds.html'">Rounds</li>
+      <li onclick="window.location.href='submissions.html'">Submissions</li>
+      <li onclick="window.location.href='leaderboard.html'">Leaderboard</li>
+      <li id="logoutBtn">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+
+    <!-- <h1>Manage Mentors</h1> -->
+
+    <section class="mentor-form-section">
+      <h2>Add New Mentor</h2>
+
+      <form id="mentorForm">
+        <input type="text" id="name" placeholder="Mentor Name" required>
+        <input type="email" id="email" placeholder="Mentor Email" required>
+        <input type="text" id="expertise" placeholder="Expertise" required>
+        <input type="password" id="password" placeholder="Password" required>
+
+        <button type="submit">Add Mentor</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+
+    <section class="mentor-list-section">
+      <h2>All Mentors</h2>
+
+      <div id="mentorsContainer"></div>
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/mentors.js"></script>
+</body>
+</html>

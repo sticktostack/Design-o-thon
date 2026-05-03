@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Design O Thon</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<div class="dashboard-page">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Design O Thon</h2>
+
+    <ul>
+      <li class="active">Dashboard</li>
+
+      <li onclick="window.location.href='notifications.html'">
+        Notifications
+      </li>
+
+      <li onclick="window.location.href='teams.html'">
+        Make Teams
+      </li>
+
+      <li onclick="window.location.href='judges.html'">
+        Judges or Mentors
+      </li>
+
+      <!-- <li onclick="window.location.href='mentors.html'">
+        Assign Mentors
+      </li> -->
+
+      <li onclick="window.location.href='rounds.html'">
+        Rounds
+      </li>
+
+      <li onclick="window.location.href='submissions.html'">
+        Submissions
+      </li>
+
+      <li onclick="window.location.href='leaderboard.html'">
+        Leaderboard
+      </li>
+
+      <li id="logoutBtn">
+        Logout
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Header -->
+    <div class="dashboard-header">
+      <h1>Analytics Dashboard</h1>
+      <p>
+        Real-time competition monitoring for
+        Design O Thon Admin Panel
+      </p>
+    </div>
+
+    <!-- Stats Cards -->
+    <section class="stats-grid">
+
+      <div class="stat-card">
+        <h3>Total Teams</h3>
+        <p id="totalTeams">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Total Judges</h3>
+        <p id="totalJudges">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Total Submissions</h3>
+        <p id="totalSubmissions">0</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>Active Rounds</h3>
+        <p id="activeRounds">0</p>
+      </div>
+
+    </section>
+
+    <!-- Lower Grid -->
+    <section class="dashboard-grid">
+
+      <!-- Recent Activities -->
+      <div class="dashboard-card">
+        <h2>Recent Activities</h2>
+
+        <div id="recentActivities">
+          <!-- Dynamic Activities -->
+        </div>
+      </div>
+
+      <!-- Top Performing Teams -->
+      <div class="dashboard-card">
+        <h2>Top Performing Teams</h2>
+
+        <div id="topTeams">
+          <!-- Dynamic Top Teams -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

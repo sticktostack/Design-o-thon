@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Judge Dashboard | Design O Thon</title>
+  <link rel="stylesheet" href="css/score.css">
+</head>
+
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-glow-ball glow-1"></div>
+  <div class="bg-glow-ball glow-2"></div>
+
+  <div class="dashboard">
+
+    <!-- ===================================== -->
+    <!-- Sidebar -->
+    <!-- ===================================== -->
+    <aside class="sidebar">
+
+      <div class="sidebar-top">
+        <h2>Scoring Panel</h2>
+        <p class="judge">Judge Name</p>
+      </div>
+
+      <ul>
+        <li class="active">
+          Assigned Teams
+        </li>
+      </ul>
+
+      <button id="logoutBtn">
+        Logout
+      </button>
+
+    </aside>
+
+    <!-- ===================================== -->
+    <!-- Main Content -->
+    <!-- ===================================== -->
+    <main class="main-content">
+
+      <!-- Header -->
+      <div class="top-header">
+        <h1>Criteria-Based Evaluation Dashboard</h1>
+
+        <p>
+          Evaluate your assigned teams based on official
+          Design O Thon judging criteria.
+          All scores are calculated out of 100 points.
+        </p>
+      </div>
+
+      <!-- Dynamic Team Cards -->
+      <section id="teamsContainer">
+
+        <!-- JS will render all assigned team cards here -->
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Script -->
+  <script src="js/score.js"></script>
+
+</body>
+</html>
