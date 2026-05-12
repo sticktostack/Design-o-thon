@@ -3,7 +3,7 @@ require("dotenv").config({
   path: "./server/.env"
 });
 
-const startDeadlineReminder = require("./utils/deadlineReminder");
+// const startDeadlineReminder = require("./utils/deadlineReminder");
 
 
 const connectDB = require("./config/db");
@@ -13,7 +13,7 @@ const http = require("http");
 const { Server } = require("socket.io");
 
 connectDB();
-startDeadlineReminder();
+// startDeadlineReminder();
 
 const server = http.createServer(app);
 
