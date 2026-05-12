@@ -1,5 +1,5 @@
 const JudgeAssignment = require("../models/JudgeAssignment");
-const Judge = require("../models/Judge");
+const Judge = require("../models/judge");
 const Team = require("../models/team");
 const Round = require("../models/round");
 const createNotification = require("../utils/createNotification");

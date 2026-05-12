@@ -1,4 +1,4 @@
-const Submission = require("../models/Submission");
+const Submission = require("../models/submission");
 const Round = require("../models/round");
 const Team = require("../models/team");
 const createNotification = require("../utils/createNotification");
