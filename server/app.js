@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const adminRoutes = require("./routes/adminRoutes");
 const teamRoutes = require("./routes/teamRoutes");
@@ -10,7 +11,7 @@ const submissionRoutes = require("./routes/submissionRoutes");
 const scoreRoutes = require("./routes/scoreRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const notificationRoutes = require("./routes/notificationRoutes");
-const startDeadlineReminder = require("./utils/deadlineReminder");
+// const startDeadlineReminder = require("./utils/deadlineReminder");
 const judgeAssignmentRoutes = require("./routes/judgeAssignmentRoutes");
 const app = express();
 
@@ -23,7 +24,7 @@ app.use("/api/judge", judgeRoutes);
 app.use("/api/mentor", mentorRoutes);
 app.use("/api/round", roundRoutes);
 app.use("/api/submission", submissionRoutes);
-app.use("/uploads", express.static("uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/score", scoreRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/notification", notificationRoutes);
