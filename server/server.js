@@ -2,23 +2,17 @@ require("dotenv").config();
 
 console.log("A");
 
-const express = require("express");
+const connectDB = require("./config/db");
 
 console.log("B");
 
-const connectDB = require("./config/db");
+const app = require("./app");
 
 console.log("C");
 
 connectDB();
 
 console.log("D");
-
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Working");
-});
 
 const PORT = process.env.PORT || 5000;
 
