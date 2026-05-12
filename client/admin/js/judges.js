@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("http://https://api-design-o-thon.onrender.com");
 
 const judgeForm = document.getElementById("judgeForm");
 const judgesContainer = document.getElementById("judgesContainer");
@@ -15,7 +15,7 @@ LOAD ALL TEAMS
 async function loadTeams() {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/team/all"
+      "http://https://api-design-o-thon.onrender.com/api/team/all"
     );
 
     const data = await response.json();
@@ -41,13 +41,13 @@ LOAD ALL JUDGES + ASSIGNMENTS
 async function loadJudges() {
   try {
     const judgeResponse = await fetch(
-      "http://localhost:5000/api/judge/all"
+      "http://https://api-design-o-thon.onrender.com/api/judge/all"
     );
 
     const judges = await judgeResponse.json();
 
     const assignmentResponse = await fetch(
-      "http://localhost:5000/api/judge-assignment/all"
+      "http://https://api-design-o-thon.onrender.com/api/judge-assignment/all"
     );
 
     const assignments = await assignmentResponse.json();
@@ -222,7 +222,7 @@ if (judgeForm) {
       };
 
       const response = await fetch(
-        "http://localhost:5000/api/judge/add",
+        "http://https://api-design-o-thon.onrender.com/api/judge/add",
         {
           method: "POST",
           headers: {
@@ -270,7 +270,7 @@ async function assignTeam(judgeId) {
 
   try {
     const response = await fetch(
-      "http://localhost:5000/api/judge-assignment/assign",
+      "http://https://api-design-o-thon.onrender.com/api/judge-assignment/assign",
       {
         method: "POST",
         headers: {
@@ -313,7 +313,7 @@ async function deleteAssignment(id) {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/judge-assignment/delete/${id}`,
+      `http://https://api-design-o-thon.onrender.com/api/judge-assignment/delete/${id}`,
       {
         method: "DELETE"
       }
@@ -344,7 +344,7 @@ async function deleteJudge(id) {
 
   try {
     await fetch(
-      `http://localhost:5000/api/judge/delete/${id}`,
+      `http://https://api-design-o-thon.onrender.com/api/judge/delete/${id}`,
       {
         method: "DELETE"
       }

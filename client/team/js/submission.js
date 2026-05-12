@@ -23,7 +23,7 @@ formData.append("teamName", document.getElementById("teamName").value);
     formData.append("pdfFile", pdfFile);
   }
 
-  const response = await fetch("http://localhost:5000/api/submission/add", {
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/submission/add", {
     method: "POST",
     body: formData
   });

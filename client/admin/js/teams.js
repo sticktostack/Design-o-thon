@@ -6,7 +6,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 // Load Teams
 async function loadTeams() {
-  const response = await fetch("http://localhost:5000/api/team/all");
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/team/all");
   const teams = await response.json();
 
   teamsContainer.innerHTML = "";
@@ -44,7 +44,7 @@ teamForm.addEventListener("submit", async (e) => {
     password: document.getElementById("password").value
   };
 
-  const response = await fetch("http://localhost:5000/api/team/add", {
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/team/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -65,7 +65,7 @@ teamForm.addEventListener("submit", async (e) => {
 
 // Delete Team
 async function deleteTeam(id) {
-  await fetch(`http://localhost:5000/api/team/delete/${id}`, {
+  await fetch(`http://https://api-design-o-thon.onrender.com/api/team/delete/${id}`, {
     method: "DELETE"
   });
 

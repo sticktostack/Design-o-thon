@@ -10,7 +10,7 @@ judgeLoginForm.addEventListener("submit", async (e) => {
     password: document.getElementById("password").value
   };
 
-  const response = await fetch("http://localhost:5000/api/judge/login", {
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/judge/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

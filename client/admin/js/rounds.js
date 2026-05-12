@@ -31,7 +31,7 @@ function getTimeLeft(deadline) {
 
 // Load Rounds
 async function loadRounds() {
-  const response = await fetch("http://localhost:5000/api/round/all");
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/round/all");
   const rounds = await response.json();
 
   roundsContainer.innerHTML = "";
@@ -82,7 +82,7 @@ roundForm.addEventListener("submit", async (e) => {
     status: document.getElementById("status").value
   };
 
-  const response = await fetch("http://localhost:5000/api/round/add", {
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/round/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -102,7 +102,7 @@ roundForm.addEventListener("submit", async (e) => {
 
 // Delete Round
 async function deleteRound(id) {
-  await fetch(`http://localhost:5000/api/round/delete/${id}`, {
+  await fetch(`http://https://api-design-o-thon.onrender.com/api/round/delete/${id}`, {
     method: "DELETE"
   });
 

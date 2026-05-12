@@ -10,7 +10,7 @@ teamLoginForm.addEventListener("submit", async (e) => {
     password: document.getElementById("password").value
   };
 
-  const response = await fetch("http://localhost:5000/api/team/login", {
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/team/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

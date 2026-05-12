@@ -4,7 +4,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 // Load All Submissions
 async function loadSubmissions() {
-  const response = await fetch("http://localhost:5000/api/submission/all");
+  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/submission/all");
   const submissions = await response.json();
 
   submissionsContainer.innerHTML = "";
@@ -40,7 +40,7 @@ async function loadSubmissions() {
         ${
           sub.pdfFile
             ? `<a
-                href="http://localhost:5000/uploads/${sub.pdfFile}"
+                href="http://https://api-design-o-thon.onrender.com/uploads/${sub.pdfFile}"
                 target="_blank"
                 class="link-btn pdf-btn"
               >
