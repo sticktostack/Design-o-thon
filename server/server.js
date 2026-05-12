@@ -1,41 +1,15 @@
-const dotenv = require("dotenv");
-require("dotenv").config({
-  path: "./server/.env"
-});
+console.log("SERVER STARTED");
 
-// const startDeadlineReminder = require("./utils/deadlineReminder");
+const express = require("express");
 
+const app = express();
 
-const connectDB = require("./config/db");
-const app = require("./app");
-
-const http = require("http");
-const { Server } = require("socket.io");
-
-connectDB();
-// startDeadlineReminder();
-
-const server = http.createServer(app);
-
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-    methods: ["GET", "POST", "DELETE"]
-  }
-});
-
-global.io = io;
-
-io.on("connection", (socket) => {
-  console.log("New client connected");
-
-  socket.on("disconnect", () => {
-    console.log("Client disconnected");
-  });
+app.get("/", (req, res) => {
+  res.send("Backend Working");
 });
 
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Running on ${PORT}`);
 });
