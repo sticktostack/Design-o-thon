@@ -1,4 +1,4 @@
-const Team = require("../models/Team");
+const Team = require("../models/team");
 const Judge = require("../models/Judge");
 const Submission = require("../models/Submission");
 const Round = require("../models/round");

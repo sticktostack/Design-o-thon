@@ -1,5 +1,5 @@
 const Judge = require("../models/Judge");
-const Team = require("../models/Team");
+const Team = require("../models/team");
 const Submission = require("../models/Submission");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");

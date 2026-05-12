@@ -1,4 +1,4 @@
-const Team = require("../models/Team");
+const Team = require("../models/team");
 const bcrypt = require("bcryptjs");
 const createNotification = require("../utils/createNotification");
 const jwt = require("jsonwebtoken");
