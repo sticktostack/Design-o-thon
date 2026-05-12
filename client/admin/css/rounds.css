@@ -243,7 +243,9 @@ body {
   clip-path: polygon(2% 0, 100% 0, 100% 75%, 98% 100%, 0 100%, 0 25%);
   transition: all ease-in-out 0.3s;
 }
-
+#roundForm input::placeholder{
+  font-size: 18px;
+}
 #roundForm button:hover {
   background: #7eef05;
   box-shadow: 0 0 20px rgba(75, 220, 19, 0.3);

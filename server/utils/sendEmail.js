@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async (to, subject, htmlContent) => {
   try {
     const info = await transporter.sendMail({
-      from: `"Design-O-Thon" <${process.env.EMAIL_USER}>`,
+      from: `"Design-Ogit push -u origin main-Thon" <${process.env.EMAIL_USER}>`,
       to,
       subject,
       html: htmlContent

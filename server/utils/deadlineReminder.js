@@ -1,5 +1,5 @@
 const cron = require("node-cron");
-const Round = require("../models/Round");
+const Round = require("../models/round");
 const Team = require("../models/Team");
 
 const createNotification = require("./createNotification");

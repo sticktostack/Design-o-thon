@@ -1,4 +1,4 @@
-const Round = require("../models/Round");
+const Round = require("../models/round");
 const createNotification = require("../utils/createNotification");
 
 

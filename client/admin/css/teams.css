@@ -223,7 +223,9 @@ body {
   transition: 0.3s;
   clip-path: polygon(5% 0, 100% 0, 100% 70%, 95% 100%, 0 100%, 0 30%);
 }
-
+input::placeholder{
+  font-size: 18px;
+}
 #teamForm button:hover {
   background: #7eef05;
   box-shadow: 0 0 20px rgba(75, 220, 19, 0.3);
