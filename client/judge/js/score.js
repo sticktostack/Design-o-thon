@@ -48,7 +48,7 @@ async function loadAssignedTeams() {
     }
 
     const response = await fetch(
-      `http://https://api-design-o-thon.onrender.com/api/judge/assigned-teams/${encodeURIComponent(judgeName)}`,
+      `https://api-design-o-thon.onrender.com/api/judge/assigned-teams/${encodeURIComponent(judgeName)}`,
     );
 
     const data = await response.json();
@@ -126,7 +126,7 @@ async function loadAssignedTeams() {
 
                 ${
                   item.submission.pdfFile
-                    ? `<a href="http://https://api-design-o-thon.onrender.com/${item.submission.pdfFile}" target="_blank">View PDF</a>`
+                    ? `<a href="https://api-design-o-thon.onrender.com/${item.submission.pdfFile}" target="_blank">View PDF</a>`
                     : ""
                 }
               </div>
@@ -253,7 +253,7 @@ async function submitScore(event, teamName, autoRoundName) {
     API CALL
     ==========================================
     */
-    const response = await fetch("http://https://api-design-o-thon.onrender.com/api/score/add", {
+    const response = await fetch("https://api-design-o-thon.onrender.com/api/score/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

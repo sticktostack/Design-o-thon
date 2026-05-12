@@ -8,14 +8,14 @@ let allTeams = [];
 
 // Load Teams
 async function loadTeams() {
-  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/team/all");
+  const response = await fetch("https://api-design-o-thon.onrender.com/api/team/all");
   allTeams = await response.json();
 }
 
 
 // Load Mentors
 async function loadMentors() {
-  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/mentor/all");
+  const response = await fetch("https://api-design-o-thon.onrender.com/api/mentor/all");
   const mentors = await response.json();
 
   mentorsContainer.innerHTML = "";
@@ -93,7 +93,7 @@ mentorForm.addEventListener("submit", async (e) => {
     password: document.getElementById("password").value
   };
 
-  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/mentor/add", {
+  const response = await fetch("https://api-design-o-thon.onrender.com/api/mentor/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -120,7 +120,7 @@ async function assignTeam(mentorId) {
     return;
   }
 
-  const response = await fetch("http://https://api-design-o-thon.onrender.com/api/mentor/assign-team", {
+  const response = await fetch("https://api-design-o-thon.onrender.com/api/mentor/assign-team", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -138,7 +138,7 @@ async function assignTeam(mentorId) {
 
 // Delete Mentor
 async function deleteMentor(id) {
-  await fetch(`http://https://api-design-o-thon.onrender.com/api/mentor/delete/${id}`, {
+  await fetch(`https://api-design-o-thon.onrender.com/api/mentor/delete/${id}`, {
     method: "DELETE"
   });
 

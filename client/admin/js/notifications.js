@@ -5,7 +5,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 // Load Notifications
 async function loadNotifications() {
   const response = await fetch(
-    "http://https://api-design-o-thon.onrender.com/api/notification/all"
+    "https://api-design-o-thon.onrender.com/api/notification/all"
   );
 
   const notifications = await response.json();
@@ -48,7 +48,7 @@ async function loadNotifications() {
 // Mark Notification Read
 async function markAsRead(id) {
   await fetch(
-    `http://https://api-design-o-thon.onrender.com/api/notification/read/${id}`,
+    `https://api-design-o-thon.onrender.com/api/notification/read/${id}`,
     {
       method: "PUT"
     }

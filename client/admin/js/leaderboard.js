@@ -10,7 +10,7 @@ LOAD LIVE LEADERBOARD + TOP 3 PODIUM
 async function loadLeaderboard() {
   try {
     const response = await fetch(
-      "http://https://api-design-o-thon.onrender.com/api/score/leaderboard"
+      "https://api-design-o-thon.onrender.com/api/score/leaderboard"
     );
 
     const leaderboard = await response.json();

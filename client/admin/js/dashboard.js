@@ -17,7 +17,7 @@ LOAD ANALYTICS DASHBOARD
 async function loadDashboard() {
   try {
     const response = await fetch(
-      "http://https://api-design-o-thon.onrender.com/api/admin/analytics"
+      "https://api-design-o-thon.onrender.com/api/admin/analytics"
     );
 
     const data = await response.json();
