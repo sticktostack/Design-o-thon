@@ -1,22 +1,24 @@
-console.log("A");
-
 require("dotenv").config();
 
-console.log("B");
+console.log("A");
 
 const express = require("express");
 
+console.log("B");
+
+const connectDB = require("./config/db");
+
 console.log("C");
 
-const app = express();
+connectDB();
 
 console.log("D");
+
+const app = express();
 
 app.get("/", (req, res) => {
   res.send("Working");
 });
-
-console.log("E");
 
 const PORT = process.env.PORT || 5000;
 
